@@ -1,0 +1,37 @@
+{
+    "dry_run": true,
+    "stake_currency": "USDT",
+    "stake_amount": 100,
+    "exchange": {
+        "name": "binance",
+        "sandbox": false,
+        "ccxt_config": {
+            "enableRateLimit": true,
+            "timeout": 30000,
+            "options": {
+                "defaultType": "spot",
+                "recvWindow": 10000
+            }
+        },
+        "ccxt_async_config": {
+            "enableRateLimit": true,
+            "timeout": 30000,
+            "options": {
+                "defaultType": "spot"
+            }
+        }
+    },
+    "markets_refresh_interval": 900,
+    "timerange": null,
+    "pairlists": [
+        {
+            "method": "StaticPairList",
+            "pairs": [
+                "BTC/USDT",
+                "ETH/USDT",
+                "XRP/USDT"
+            ]
+        }
+    ],
+    "datadir": "user_data/data"
+}

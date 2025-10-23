@@ -1,0 +1,47 @@
+Generic single-database configuration.
+
+# Run in the project root directory
+alembic init alembic
+
+# Change the sqlalchemy.url to match your database (alembic.ini)
+sqlalchemy.url = postgresql+psycopg2://user:pass@localhost:5432/dbname
+
+# In (alembic/env.py) add:
+    import sys
+    import os
+
+    # Add your project to the Python path
+    sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
+
+    # Import your Base and models
+    from app.db.config import Base
+    from app.models.ohlcv import OHLCV  # Import all your models
+
+    target_metadata = Base.metadata
+
+# Ensure your project has this structure
+    project/
+    ├── alembic/
+    │   ├── versions/          # Migration scripts
+    │   ├── env.py            # Migration environment
+    │   └── script.py.mako    # Migration template
+    ├── alembic.ini           # Alembic configuration
+    ├── src/
+    │   └── app/
+    │       ├── models/       # Your SQLAlchemy models
+    │       └── db/
+    │           └── config.py # Database configuration
+    └── docker-compose.yml
+
+# When you modify your models
+    # Generate a new migration script
+    alembic revision --autogenerate -m "description_of_changes"
+
+    # In Docker environment:
+    docker compose exec api alembic revision --autogenerate -m "description_of_changes"
+
+    # Apply all pending migrations
+    alembic upgrade head
+
+    # In Docker environment:
+    docker compose exec api alembic upgrade head

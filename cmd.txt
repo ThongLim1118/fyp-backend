@@ -1,0 +1,2 @@
+# For freqtrade docker image configuration
+docker run --rm -it -v ${PWD}/user_data:/freqtrade/user_data freqtradeorg/freqtrade:stable new-config --config user_data/config.json

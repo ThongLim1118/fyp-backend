@@ -1,0 +1,9 @@
+freqtrade
+fastapi
+uvicorn
+pydantic-settings
+sqlalchemy
+pandas
+psycopg2-binary
+alembic
+ccxt

@@ -1,0 +1,14 @@
+{
+    "Servers": {
+        "1": {
+            "Name": "ft-db",
+            "Group": "Servers",
+            "Host": "db",
+            "Port": 5432,
+            "MaintenanceDB": "ftrade",
+            "Username": "ft",
+            "PassFile": "/pgpass",
+            "SSLMode": "prefer"
+        }
+    }
+}
