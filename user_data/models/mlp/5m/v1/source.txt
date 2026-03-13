@@ -1,0 +1,2 @@
+root: model-dev
+path: /notebook-cloud/tabular_mlp_BTCUSDT_5m.ipynb

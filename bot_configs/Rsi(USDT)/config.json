@@ -1,0 +1,64 @@
+{
+    "initial_state": "running",
+    "max_open_trades": 3,
+    "stake_currency": "USDT",
+    "stake_amount": 100,
+    "dry_run": true,
+    "dry_run_wallet": 1000,
+    "timeframe": "5m",
+    "strategy": "RsiStrategy",
+    "db_url": "sqlite:////freqtrade/shared_db/Rsi_USDT_dry-run.sqlite",
+    "exchange": {
+        "name": "binance",
+        "key": "",
+        "secret": "",
+        "ccxt_config": {},
+        "ccxt_async_config": {},
+        "pair_whitelist": [
+            "BTC/USDT",
+            "ETH/USDT"
+        ],
+        "pair_blacklist": []
+    },
+    "api_server": {
+        "enabled": false,
+        "port": 8080,
+        "listen_ip_address": "0.0.0.0",
+        "listen_port": 8080,
+        "username": "freqtrader",
+        "password": "some_secure_password",
+        "verbosity": "info"
+    },
+    "telegram": {
+        "enabled": false,
+        "token": "",
+        "chat_id": ""
+    },
+    "pairlists": [
+        {
+            "method": "StaticPairList"
+        }
+    ],
+    "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false
+    },
+    "order_time_in_force": {
+        "entry": "gtc",
+        "exit": "gtc"
+    },
+    "entry_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0
+    },
+    "exit_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0
+    }
+}

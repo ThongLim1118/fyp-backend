@@ -17,8 +17,8 @@ src_path = os.path.join(project_root, 'src')
 sys.path.insert(0, src_path)
 
 from alembic import context
-from app.db.config import engine
-from app.db.config import Base
+from src.app.db.config import engine
+from src.app.db.config import Base
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config

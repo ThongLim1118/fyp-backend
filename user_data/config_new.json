@@ -1,0 +1,49 @@
+{
+    "dry_run": true,
+    "timeframe": "1h",
+    "stake_currency": "USDT",
+    "stake_amount": 100,
+    "max_open_trades": 3,
+    "strategy": "RsiStrategy",
+    "strategy_path": "user_data/strategies",
+    "exchange": {
+        "name": "binance",
+        "sandbox": false,
+        "key": "",
+        "secret": "",
+        "ccxt_config": {},
+        "ccxt_async_config": {},
+        "pair_whitelist": [
+            "BTC/USDT",
+            "ETH/USDT",
+            "XRP/USDT"
+        ]
+    },
+    "pairlists": [
+        {
+            "method": "StaticPairList"
+        }
+    ],
+    "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false
+    },
+    "order_time_in_force": {
+        "entry": "gtc",
+        "exit": "gtc"
+    },
+    "entry_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0
+    },
+    "exit_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0
+    }
+}

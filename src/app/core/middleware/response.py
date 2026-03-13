@@ -6,7 +6,7 @@ from typing import Any
 from fastapi import Request
 from fastapi.responses import JSONResponse, Response
 
-from app.schemas.response import ApiResponse
+from src.app.schemas.response import ApiResponse
 
 logger = logging.getLogger("app.middleware.response")
 

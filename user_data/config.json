@@ -1,5 +1,9 @@
 {
+    "dataformat_ohlcv": "feather",
+    "trading_mode": "spot",
     "dry_run": true,
+    "strategy": "RsiStrategy",
+    "strategy_path": "user_data/strategies",
     "stake_currency": "USDT",
     "stake_amount": 100,
     "exchange": {
@@ -25,13 +29,41 @@
     "timerange": null,
     "pairlists": [
         {
-            "method": "StaticPairList",
-            "pairs": [
-                "BTC/USDT",
-                "ETH/USDT",
-                "XRP/USDT"
-            ]
+            "method": "StaticPairList"
         }
     ],
-    "datadir": "user_data/data"
+    "pair_whitelist": [
+        "BTC/USDT",
+        "ETH/USDT",
+        "XRP/USDT"
+    ],
+    "datadir": "user_data/data",
+    "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "market",
+        "stoploss_on_exchange": true
+    },
+    "entry_pricing": {
+        "price_side": "ask",
+        "use_order_book": false,
+        "order_book_top": 1,
+        "check_depth_of_market": {
+            "enabled": false,
+            "interval": 60,
+            "threshold": 0.1
+        }
+    },
+    "exit_strategy": {},
+    "exit_pricing": {
+        "price_side": "ask",
+        "use_order_book": false,
+        "order_book_top": 1,
+        "check_depth_of_market": {
+            "enabled": false,
+            "interval": 60,
+            "threshold": 0.1
+        }
+    },
+    "db_url": "postgresql://postgres:afubo1234@db.zgvzascfyfvtpmdetrwg.supabase.co:5432/postgres"
 }

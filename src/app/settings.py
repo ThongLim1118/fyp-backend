@@ -6,19 +6,19 @@ import json
 
 class Settings(BaseSettings):
 
-    POSTGRES_USER: str = Field(default="ft")
-    POSTGRES_PASSWORD: str = Field(default="ftpass")
-    POSTGRES_DB: str = Field(default="ftrade")
-    POSTGRES_PORT: int = Field(default=5432)
+    # POSTGRES_USER: str = Field(default="ft")
+    # POSTGRES_PASSWORD: str = Field(default="ftpass")
+    # POSTGRES_DB: str = Field(default="ftrade")
+    # POSTGRES_PORT: int = Field(default=5432)
     DATABASE_URL: str = Field(default="") # The direct URL, optional; will be read from env if set.
-
+    LOCAL_DATABASE_URL: str = Field(default="") # The local URL, optional; will be read from env if set. 
 
     freqtrade_config_path: Path = Field(
-        default=Path("/user_data/config.json"),
+        default=Path("/app/user_data/config.json"),
         alias='FREQTRADE_CONFIG_PATH' # Map the variable to the model field
     )
     # `freqtrade_userdir` isn't in .env, keeping the default here:
-    freqtrade_userdir: Path = Path("/user_data")
+    freqtrade_userdir: Path = Path("/app/user_data")
     
     # PYDANTIC V2 CONFIGURATION
     model_config = SettingsConfigDict(
@@ -35,14 +35,14 @@ class Settings(BaseSettings):
         with open(self.freqtrade_config_path) as f:
             return json.load(f)
 
-    @cached_property
-    def get_sync_db_url(self) -> str:
-        """Constructs the standard psycopg2 (synchronous) database URL."""
-        # This uses the specific fields defined above, in case DATABASE_URL isn't set
-        return (
-            f"postgresql+psycopg2://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}@"
-            f"db:{self.POSTGRES_PORT}/{self.POSTGRES_DB}"
-        )
+    # @cached_property
+    # def get_sync_db_url(self) -> str:
+    #     """Constructs the standard psycopg2 (synchronous) database URL."""
+    #     # This uses the specific fields defined above, in case DATABASE_URL isn't set
+    #     return (
+    #         f"postgresql+psycopg2://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}@"
+    #         f"db:{self.POSTGRES_PORT}/{self.POSTGRES_DB}"
+    #     )
 
 
 settings = Settings()

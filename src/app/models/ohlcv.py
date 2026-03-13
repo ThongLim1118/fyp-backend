@@ -2,7 +2,7 @@
 from datetime import datetime
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import String, Float, TIMESTAMP
-from app.db.config import Base
+from src.app.db.config import Base
 
 class OHLCV(Base):
     __tablename__ = "ohlcv"

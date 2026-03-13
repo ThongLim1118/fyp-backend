@@ -1,0 +1,70 @@
+Dashboard
+
+    KPIs & equity curve/drawdown: v_equity_latest, backtest_equity_curve, paper_equity_curve
+
+    Signals fired (overlay): signal_event (or backtest_signal for a chosen run)
+
+    Recent alerts: v_recent_alerts
+
+Strategies
+
+    Grid/table list & metrics: strategy, strategy_version, v_strategy_rollup
+
+    Drill-down params: strategy_version.params_json
+
+    Perf metrics: strategy_performance (batch job updates from latest runs)
+
+Model
+
+    Runs & status: model, model_run, model_metric
+
+    Predictions vs actuals: model_prediction
+
+    Feature importance: model_feature_importance
+
+    Artifacts to download: artifact
+
+Backtest
+
+    Runs list: backtest_run
+
+    Equity & DD: backtest_equity_curve
+
+    Price + signals: ohlcv + backtest_signal
+
+    Trade history: backtest_trade
+
+    Orders (optional detail): backtest_order
+
+    Summary metrics: backtest_metric
+
+Upload
+
+    File registry + preview: upload, upload_sample_row
+
+Paper Trade
+
+    Session switcher: paper_session
+
+    Positions: paper_position
+
+    Orders/Fills: paper_order, paper_fill
+
+    P&L tracking: paper_trade, paper_equity_curve
+
+    Activity log: activity_log
+
+
+When a backtest finishes, write:
+
+    backtest_metric (Sharpe, MaxDD, WinRate,…)
+
+    backtest_equity_curve (ts,equity,drawdown)
+
+    backtest_trade, backtest_order, backtest_signal
+
+    A small job to update strategy_performance rollup from the newest successful backtest_run.
+
+For paper trading, append paper_equity_curve every bar/heartbeat, maintain paper_position, and create paper_trade on each close.
+
+Models: store experiment parameters in model_run.params_json, metrics in model_metric, predictions in model_prediction. Keep serialized model in artifact.

@@ -1,0 +1,46 @@
+#######################################################
+#######################################################
+[DEBUG] Last candle in strategy dataframe: 34560
+ml_pred stats: 1=12440, 0=22121, NaN=0
+#######################################################
+[DEBUG] Last candle in strategy dataframe: 34560
+ml_pred stats: 1=12440, 0=22121, NaN=0
+#######################################################
+[DEBUG] Last candle in strategy dataframe: 34560
+ml_pred stats: 1=12440, 0=22121, NaN=0
+#######################################################
+[DEBUG] Last candle in strategy dataframe: 34560
+ml_pred stats: 1=12440, 0=22121, NaN=0
+#######################################################
+[DEBUG] Last candle in strategy dataframe: 34560
+ml_pred stats: 1=12440, 0=22121, NaN=0
+#######################################################
+[DEBUG] Last candle in strategy dataframe: 44064
+ml_pred stats: 1=357, 0=43708, NaN=0
+#######################################################
+[DEBUG] Last candle in strategy dataframe: 42048
+ml_pred stats: 1=0, 0=42049, NaN=0
+#######################################################
+[DEBUG] Last candle in strategy dataframe: 34560
+ml_pred stats: 1=12440, 0=22121, NaN=0
+####################### MLPMultiTF_5m_v2 ################################
+[MLPMultiTF_5m_v2] param net.0.weight: nan=0, min=-4.578405, max=5.195711
+[MLPMultiTF_5m_v2] param net.0.bias: nan=0, min=-1.914142, max=0.757809
+[MLPMultiTF_5m_v2] param net.3.weight: nan=0, min=-3.137315, max=0.869632
+[MLPMultiTF_5m_v2] param net.3.bias: nan=0, min=-0.558891, max=1.230919
+[MLPMultiTF_5m_v2] param net.6.weight: nan=0, min=-0.189266, max=0.298622
+[MLPMultiTF_5m_v2] param net.6.bias: nan=0, min=0.153957, max=0.153957
+[MLPMultiTF_5m_v2] total NaN in params: 0
+[MLPMultiTF_5m_v2] feat_df columns sample: ['date_5m', 'open_5m', 'high_5m', 'low_5m', 'close_5m', 'volume_5m', 'open_count_5m', 'high_count_5m', 'low_count_5m', 'close_count_5m', 'max_count_5m', 'date_15m', 'open_15m', 'high_15m', 'low_15m', 'close_15m', 'volume_15m', 'date_1h', 'open_1h', 'high_1h', 'low_1h', 'close_1h', 'volume_1h', 'close_5m_lag1', 'close_5m_lag2', 'close_5m_lag3', 'close_5m_lag4', 'close_5m_lag5', 'close_5m_lag6', 'close_5m_lag7', 'close_5m_lag8', 'close_5m_lag9', 'close_5m_lag10', 'close_5m_lag11', 'close_5m_lag12', 'close_5m_lag13', 'close_5m_lag14', 'close_5m_lag15', 'close_5m_lag16', 'close_5m_lag17']
+[MLPMultiTF_5m] feature_cols used: ['open_5m', 'high_5m', 'low_5m', 'close_5m', 'volume_5m', 'open_15m', 'high_15m', 'low_15m', 'close_15m', 'volume_15m', 'open_1h', 'high_1h', 'low_1h', 'close_1h', 'volume_1h', 'close_5m_lag1', 'close_5m_lag2', 'close_5m_lag3', 'close_5m_lag4', 'close_5m_lag5', 'close_5m_lag6', 'close_5m_lag7', 'close_5m_lag8', 'close_5m_lag9', 'close_5m_lag10', 'ret_1', 'ret_5', 'ma_5', 'vol_5', 'ret_10', 'ma_10', 'vol_10', 'ret_20', 'ma_20', 'vol_20', 'rsi_14', 'rsi_5', 'macd', 'macd_signal', 'macd_hist', 'close_5m_minus_close_15m', 'close_5m_minus_close_1h', 'close_5m_minus_close_5m_lag1', 'close_5m_minus_close_5m_lag2', 'close_5m_minus_close_5m_lag3', 'close_5m_minus_close_5m_lag4', 'close_5m_minus_close_5m_lag5', 'close_5m_minus_close_5m_lag6', 'close_5m_minus_close_5m_lag7', 'close_5m_minus_close_5m_lag8', 'close_5m_minus_close_5m_lag9', 'close_5m_minus_close_5m_lag10']
+[MLPMultiTF_5m] feat_sub dtypes: {'open_5m': dtype('float64'), 'high_5m': dtype('float64'), 'low_5m': dtype('float64'), 'close_5m': dtype('float64'), 'volume_5m': dtype('float64'), 'open_15m': dtype('float64'), 'high_15m': dtype('float64'), 'low_15m': dtype('float64'), 'close_15m': dtype('float64'), 'volume_15m': dtype('float64'), 'open_1h': dtype('float64'), 'high_1h': dtype('float64'), 'low_1h': dtype('float64'), 'close_1h': dtype('float64'), 'volume_1h': dtype('float64'), 'close_5m_lag1': dtype('float64'), 'close_5m_lag2': dtype('float64'), 'close_5m_lag3': dtype('float64'), 'close_5m_lag4': dtype('float64'), 'close_5m_lag5': dtype('float64'), 'close_5m_lag6': dtype('float64'), 'close_5m_lag7': dtype('float64'), 'close_5m_lag8': dtype('float64'), 'close_5m_lag9': dtype('float64'), 'close_5m_lag10': dtype('float64'), 'ret_1': dtype('float64'), 'ret_5': dtype('float64'), 'ma_5': dtype('float64'), 'vol_5': dtype('float64'), 'ret_10': dtype('float64'), 'ma_10': dtype('float64'), 'vol_10': dtype('float64'), 'ret_20': dtype('float64'), 'ma_20': dtype('float64'), 'vol_20': dtype('float64'), 'rsi_14': dtype('float64'), 'rsi_5': dtype('float64'), 'macd': dtype('float64'), 'macd_signal': dtype('float64'), 'macd_hist': dtype('float64'), 'close_5m_minus_close_15m': dtype('float64'), 'close_5m_minus_close_1h': dtype('float64'), 'close_5m_minus_close_5m_lag1': dtype('float64'), 'close_5m_minus_close_5m_lag2': dtype('float64'), 'close_5m_minus_close_5m_lag3': dtype('float64'), 'close_5m_minus_close_5m_lag4': dtype('float64'), 'close_5m_minus_close_5m_lag5': dtype('float64'), 'close_5m_minus_close_5m_lag6': dtype('float64'), 'close_5m_minus_close_5m_lag7': dtype('float64'), 'close_5m_minus_close_5m_lag8': dtype('float64'), 'close_5m_minus_close_5m_lag9': dtype('float64'), 'close_5m_minus_close_5m_lag10': dtype('float64')}
+feat_sub mean=37166.767192, std=2941.386336
+[MLPMultiTF_5m] X shape before predict: (34561, 52), non-finite in X: 0
+[MLPMultiTF_5m_v2] raw outputs: nan=0, min=-37.220913, max=23.481804
+[MLPMultiTF_5m_v2] _predict_scores: shape=(34561,), nan=0, min=-37.2209, max=23.4818
+ml_pred stats: 1=19023, 0=15538, NaN=0
+#######################################################
+ml_proba stats: 1=0, 0=0, NaN=0
+#######################################################
+[DEBUG] Last candle in strategy dataframe: 34560
+ml_pred stats: 1=12440, 0=22121, NaN=0
